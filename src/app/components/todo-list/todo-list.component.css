@@ -1,0 +1,9 @@
+.done {
+    background-color: palegreen;
+    border: 1px solid green;
+}
+
+.notDone {
+    background-color: mistyrose;
+    border: 1px solid red;
+}

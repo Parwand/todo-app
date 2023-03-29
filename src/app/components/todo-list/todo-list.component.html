@@ -1,0 +1,27 @@
+<div class="row mt-2">
+    <div class="col-md-4">
+        <div class="card shadow">
+            <div class="card-header">ADD Todo</div>
+            <div class="card-body">
+                <app-todo-form (onAddTodo)="onAddTodo($event)"></app-todo-form>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header">Todos
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" ngModel #key ="ngModel" name="key" (ngModelChange)="onSearch(key.value)">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of todos" [ngClass]="item.isDone ? 'done' : 'notDone'"> <app-todo-item [todo]="item" (onDelete)="onDeleteTodo($event)"></app-todo-item></li>
+                </ul>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>

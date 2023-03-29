@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <form action="" #add = "ngForm" (submit)="onSubmit(add)">
+            <div>
+                <label class="form-group" for="text">Text</label>
+                <input class="form-control" type="text" ngModel name="text" id="text">
+            </div>
+
+            <div>
+                <label class="form-group" for="date">Date</label>
+                <input class="form-control" type="date" ngModel name="date" id="date">
+            </div>
+
+            <div>
+                <input class="form-check-input" type="checkbox" ngModel name="isDone" id="isDone">
+                <label class="form-group" for="text">isDone</label>
+            </div>
+
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

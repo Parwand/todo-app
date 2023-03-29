@@ -1,0 +1,11 @@
+<div class="row" >
+    <div class="col-8">
+        {{todo.text}} {{todo.date | date}}
+    </div>
+    <div class="col-3" >
+        <input type="checkbox"  name="isDone" id="isDone" [defaultChecked]="todo.isDone" (change)="todo.isDone = !todo.isDone">
+    </div>
+    <div class="col-1">
+        <button class="btn btn-sm btn-outline-danger" type="submit" (click)="onDeleteTodo(todo)" >Delete</button>
+    </div>
+</div>
